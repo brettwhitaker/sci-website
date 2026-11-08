@@ -121,7 +121,7 @@
   .about h2 { color: #fff; }
   .about .eyebrow { color: var(--blue); }
   .about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
-  .about img { width: 100%; border-radius: 16px; display: block; }
+  .about img { width: 100%; height: auto; aspect-ratio: 640 / 783; object-fit: cover; border-radius: 16px; display: block; }
   .about p { color: #d6dfea; }
   .about blockquote { margin: 26px 0 0; padding: 0 0 0 18px; border-left: 3px solid var(--accent); font-family: Montserrat, Inter, sans-serif; font-weight: 600; font-size: 1.15rem; color: #fff; }
   @media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; } .about img { max-width: 240px; } }
@@ -233,7 +233,7 @@
 
   <section class="about" id="about">
     <div class="wrap about-grid">
-      <img src="assets/brett-square.jpg" width="512" height="512" alt="Portrait of Brett Whitaker" loading="lazy">
+      <img src="assets/brett-whitaker.jpg" width="640" height="783" alt="Portrait of Brett Whitaker" loading="lazy">
       <div>
         <div class="eyebrow">About</div>
         <h2>Hi, I'm Brett.</h2>
