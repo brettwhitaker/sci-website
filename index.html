@@ -11,9 +11,10 @@
 <meta property="og:description" content="Content writing, content strategy and social media for small and growing businesses.">
 <meta property="og:url" content="https://strategiccreativeinitiatives.com/">
 <meta property="og:image" content="https://strategiccreativeinitiatives.com/assets/brett-square.jpg">
+<link rel="icon" type="image/png" href="assets/sci-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,15 +30,18 @@
 </script>
 <style>
   :root {
-    --ink: #1c2633;
-    --ink-soft: #4a5768;
-    --navy: #1f3a5f;
-    --navy-deep: #152a45;
-    --accent: #c9792e;
-    --accent-soft: #f6eadf;
-    --paper: #fbf9f6;
+    /* SCI brand: black, blue #00B7FC, red #FF0303 */
+    --ink: #16181d;
+    --ink-soft: #4b5260;
+    --navy: #0b0c0f;          /* primary (buttons, headings) */
+    --navy-deep: #000000;
+    --accent: #d90202;        /* brand red, darkened slightly for readable small text */
+    --blue: #00b7fc;          /* brand blue (decorative) */
+    --blue-text: #0072a3;     /* readable blue for links */
+    --accent-soft: #e5f7ff;
+    --paper: #f7fbfd;
     --card: #ffffff;
-    --line: #e7e1d8;
+    --line: #dfe8ee;
     --radius: 14px;
     --max: 1080px;
   }
@@ -49,12 +53,12 @@
     font: 400 17px/1.65 Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 650; line-height: 1.15; color: var(--navy-deep); margin: 0 0 .5em; }
-  h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); letter-spacing: -.01em; }
+  h1, h2, h3 { font-family: Montserrat, Inter, sans-serif; font-weight: 700; line-height: 1.15; color: var(--navy-deep); margin: 0 0 .5em; }
+  h1 { font-size: clamp(2rem, 4.6vw, 3.2rem); letter-spacing: -.02em; }
   h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
-  h3 { font-size: 1.2rem; font-weight: 500; }
+  h3 { font-size: 1.12rem; font-weight: 600; }
   p { margin: 0 0 1em; }
-  a { color: var(--navy); text-underline-offset: 3px; }
+  a { color: var(--blue-text); text-underline-offset: 3px; }
   a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
   .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 600; color: var(--accent); margin-bottom: .8rem; }
@@ -63,15 +67,15 @@
   /* Header */
   header.site { position: sticky; top: 0; z-index: 10; background: rgba(251,249,246,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
   header.site .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 16px; }
-  .brand { font-family: Fraunces, Georgia, serif; font-weight: 650; color: var(--navy-deep); text-decoration: none; font-size: 1.15rem; }
-  .brand span { color: var(--accent); }
+  .brand { display: flex; align-items: center; }
+  .brand img { height: 46px; width: auto; display: block; }
   nav a { margin-left: 22px; text-decoration: none; color: var(--ink-soft); font-weight: 500; font-size: .95rem; }
   nav a:hover { color: var(--navy); }
   @media (max-width: 720px) { nav a:not(.nav-cta) { display: none; } }
 
   .btn { display: inline-block; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; transition: transform .15s ease, background .15s ease; }
   .btn-primary { background: var(--navy); color: #fff; }
-  .btn-primary:hover { background: var(--navy-deep); transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--blue-text); transform: translateY(-1px); }
   .btn-ghost { color: var(--navy); border: 1.5px solid var(--navy); }
   .btn-ghost:hover { background: #fff; }
   nav .nav-cta { margin-left: 22px; padding: 9px 16px; background: var(--navy); color: #fff; border-radius: 999px; font-size: .9rem; }
@@ -86,7 +90,7 @@
   .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
   .portrait { position: relative; }
   .portrait img { width: 100%; height: auto; border-radius: 20px; display: block; box-shadow: 0 20px 50px rgba(21,42,69,.18); }
-  .portrait::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 2px solid var(--accent); border-radius: 20px; z-index: -1; }
+  .portrait::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 3px solid var(--blue); border-radius: 20px; z-index: -1; }
   @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .portrait { max-width: 320px; } }
 
   /* Services */
@@ -94,7 +98,7 @@
   .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 36px; }
   @media (max-width: 860px) { .svc-grid { grid-template-columns: 1fr; } }
   .svc { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; }
-  .svc h3 { font-size: 1.45rem; font-weight: 650; }
+  .svc h3 { font-size: 1.35rem; font-weight: 700; }
   .svc ul { list-style: none; padding: 0; margin: 18px 0 0; }
   .svc li { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px dashed var(--line); }
   .svc li:last-child { border-bottom: 0; }
@@ -108,17 +112,17 @@
   @media (max-width: 860px) { .steps { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
   .step { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
-  .step::before { counter-increment: step; content: counter(step); display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; margin-bottom: 12px; }
+  .step::before { counter-increment: step; content: counter(step); display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent-soft); color: var(--blue-text); font-weight: 700; margin-bottom: 12px; }
   .step p { margin: 0; color: var(--ink-soft); font-size: .97rem; }
 
   /* About */
-  .about { background: var(--navy-deep); color: #e9eef5; }
+  .about { background: #0b0c0f; color: #e9eef5; border-top: 4px solid var(--blue); }
   .about h2 { color: #fff; }
-  .about .eyebrow { color: #f0b37a; }
+  .about .eyebrow { color: var(--blue); }
   .about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
   .about img { width: 100%; border-radius: 16px; display: block; }
   .about p { color: #d6dfea; }
-  .about blockquote { margin: 26px 0 0; padding: 0 0 0 18px; border-left: 3px solid var(--accent); font-family: Fraunces, Georgia, serif; font-size: 1.25rem; color: #fff; }
+  .about blockquote { margin: 26px 0 0; padding: 0 0 0 18px; border-left: 3px solid var(--accent); font-family: Montserrat, Inter, sans-serif; font-weight: 600; font-size: 1.15rem; color: #fff; }
   @media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; } .about img { max-width: 240px; } }
 
   /* Work */
@@ -143,7 +147,7 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#top">Strategic Creative <span>Initiatives</span></a>
+    <a class="brand" href="#top"><img src="assets/sci-logo.png" width="557" height="155" alt="Strategic Creative Initiatives"></a>
     <nav aria-label="Main">
       <a href="#services">Services</a>
       <a href="#work">Work</a>
@@ -244,31 +248,29 @@
   <section id="work">
     <div class="wrap">
       <div class="eyebrow">Selected writing</div>
-      <h2>A few things I've written.</h2>
+      <h2>Writing that helps people feel at home.</h2>
+      <p class="muted">I write the social media for Ideal Move, a Northeast Florida move management company that helps families and older adults through every step of a move. A few recent posts:</p>
       <div class="work-grid">
         <article class="work">
           <div class="tag">Social media · Ideal Move</div>
-          <h3>Senior move management, told with warmth</h3>
-          <p class="muted">Ongoing social media for Ideal Move, a Northeast Florida moving concierge and resettlement company.</p>
+          <h3>Feeling at home</h3>
           <blockquote>"Moving into a new home is one thing. Feeling at home is another. … Because the best part of moving isn't getting everything through the front door. It's finally feeling at home again."</blockquote>
+        </article>
+        <article class="work">
+          <div class="tag">Social media · Ideal Move</div>
+          <h3>What does a move manager actually do?</h3>
+          <blockquote>"Most people know what a moving company does. But what exactly does a move manager do? … Because a successful move isn't just about getting everything from one address to another. It's about making the transition into your next chapter as smooth as possible."</blockquote>
+        </article>
+        <article class="work">
+          <div class="tag">Social media · Ideal Move</div>
+          <h3>Just moved in? Here's where to start</h3>
+          <blockquote>"Once the moving truck pulls away, there's still plenty to do. … Start with the kitchen and bedroom, then work your way through the living areas before focusing on the finishing touches that make a house feel like home."</blockquote>
         </article>
         <article class="work">
           <div class="tag">Article · Ideal Move</div>
           <h3>The Ideal Team for Your Next Move</h3>
           <p class="muted">A LinkedIn article for Ideal Move.</p>
           <a class="more" href="https://www.linkedin.com/pulse/ideal-team-your-next-move-ideal-move-itf2e/" target="_blank" rel="noopener">Read on LinkedIn →</a>
-        </article>
-        <article class="work">
-          <div class="tag">Sports writing</div>
-          <h3>A Spark from the Bench: An Indiana Pacers Victory 25 Years in the Making</h3>
-          <p class="muted">Storytelling and statistics, from a lifelong Indianapolis sports fan.</p>
-          <a class="more" href="https://www.linkedin.com/pulse/spark-from-bench-indiana-pacers-victory-25-years-making-whitaker-v3uuc/" target="_blank" rel="noopener">Read on LinkedIn →</a>
-        </article>
-        <article class="work">
-          <div class="tag">Business &amp; markets</div>
-          <h3>Oof, Didn't See That Coming: LLY Q2 Earnings Reflection &amp; Debate</h3>
-          <p class="muted">An analysis piece on a quarterly earnings report.</p>
-          <a class="more" href="https://www.linkedin.com/pulse/oof-didnt-see-coming-lly-q2-earnings-reflection-debate-brett-whitaker-finfc/" target="_blank" rel="noopener">Read on LinkedIn →</a>
         </article>
       </div>
     </div>
